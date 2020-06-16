@@ -81,6 +81,9 @@ header #header-img img{
     left:20px!important;
     z-index:4!important;
   }
+  .learn{
+    padding:0 5%;
+  }
   .ev table h4{
     padding: 0;
     margin: 0;
@@ -118,7 +121,7 @@ section{
   opacity: .5;
 }
 
-.about_me .story_s{
+.story_s{
   font-size: 30px;
   font-weight: bolder;
   padding:0;
