@@ -11,25 +11,25 @@
 }
 
 header{
-  position: relative ;
+  position: relative;
   margin: auto;
   width: 100%;
+  top: -1.5vh;
   height: 90vh;
-  background: white;
+  background: rgba(255,255,255,0.5);
   display: flex;
   justify-content: center;
   align-items: center;
   /*background: linear-gradient(90deg, rgba(2,0,36,0.5) 0%, rgba(0,212,255,0.4) 100%);*/
   color:black;
   -webkit-box-shadow: 0px 15px 35px 11px rgba(0,0,0,0.20); 
-box-shadow: 0px 15px 35px 11px rgba(0,0,0,0.20);
+  box-shadow: 0px 15px 35px 11px rgba(0,0,0,0.20);
   margin-bottom: 10vh
 }
 header h1{
   font-size: 70px;
-  width: 70%;
   z-index: 3;
-  order: 1px solid black;
+  /*border: 1px solid black;*/
   animation: header_h 2s;
 }
 @keyframes header_h{
@@ -42,16 +42,17 @@ header h1{
   }
   100%{
     opacity:1;
-    margin-left: 30px;
+    margin-left: 0px;
   }
 }
 
 /*id selector*/
 header #header-img{
   position: absolute;
-  z-index: 1;
+  z-index: -1;
   height: 90vh;
   top: 0;
+  left: 0;
 }
 header #header-img img{
   animation: header-img 4s;
@@ -81,14 +82,14 @@ header #header-img img{
     left:20px!important;
     z-index:4!important;
   }
-  .learn{
-    padding:0 5%;
-  }
   .ev table h4{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-size: 15px;
+  }
+  .min-nav{
+    margin: 10px 0!important;
   }
 }
 @media screen and (min-width: 720px){
@@ -98,12 +99,6 @@ header #header-img img{
 .ev table{
   width: 97%;
   margin: auto;
-}
-.intro{
-  position: absolute!important;
-  left: 80px!important;
-  top: 40vh!important;
-  z-index: 4;
 }
 }
 
@@ -147,6 +142,13 @@ section{
 }
 .skill-set-li{
   margin: 5vh auto;
+}
+
+.langs{
+  -webkit-box-shadow: 0px 15px 100px 11px rgba(0,0,0,0.10); 
+  box-shadow: 0px 15px 100px 11px rgba(0,0,0,0.10);
+  padding:10px;
+  margin-bottom: 10vh;
 }
 
 /*TABLE*/
@@ -202,5 +204,10 @@ footer{
   margin-bottom: 10vh;  
 }
 
-
+.min-nav{
+  margin: 10px 15%;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
 
