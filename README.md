@@ -8,9 +8,7 @@ Project 0
 
 #prject description
 
-I built a portfolio site.
-the first, second sections contains about me,
-the third section is a some responsive boxes which is 3 per page on large screen, 2 on tablet and 1 on mobile.
-On click on learn more it loads new page about the language.
+I built a portfolio site which responsive with the help of bootstrap (3.3.6) grid system.
+It contains five (5) different pages linking to each other.
 
 >>>>>>> d3a4844ef2284a2ed9df2315a00b9b93c3f3ffce

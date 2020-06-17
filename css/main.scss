@@ -1,3 +1,6 @@
+$c-white: white;
+$c-black: black;
+
 .d-flex{
   display: flex;
 }
@@ -10,76 +13,40 @@
   box-sizing: border-box;
 }
 
-/*navbar*/
-.nav-dark {
-  background: black;
-  color: white;
-  height: 10vh;
-
-  a {
-    color: white;
-    transition: .8s;
-  }
-
-  .nav {
-    margin: auto;
-    margin-top: 20px;
-
-    a {
-      color: white;
-      padding: 0 20px;
-    }
-
-    .active {
-      background: white;
-      color: black;
-
-      a {
-        color: black;
-      }
-    }
-
-    li:hover {
-      a {
-        color: black;
-      }
-    }
-  }/*.nav*/
-}/*navbar*/
-
 header{
-  position: relative ;
+  position: relative;
   margin: auto;
   width: 100%;
+  top: -1.5vh;
   height: 90vh;
-  background: white;
+  background: rgba(255,255,255,0.5);
   display: flex;
   justify-content: center;
   align-items: center;
-  /*background: linear-gradient(90deg, rgba(2,0,36,0.5) 0%, rgba(0,212,255,0.4) 100%);*/
   color:black;
   -webkit-box-shadow: 0px 15px 35px 11px rgba(0,0,0,0.20); 
   box-shadow: 0px 15px 35px 11px rgba(0,0,0,0.20);
   margin-bottom: 10vh;
-  
+
   h1{
     font-size: 70px;
-    width: 70%;
     z-index: 3;
-    order: 1px solid black;
+    /*border: 1px solid black;*/
     animation: header_h 2s;
   }
 
   #header-img{
     position: absolute;
-    z-index: 1;
+    z-index: -1;
     height: 90vh;
     top: 0;
+    left: 0;
 
-    img {
+    img{
       animation: header-img 4s;
     }
   }
+
 }
 @keyframes header_h{
   0%{
@@ -91,7 +58,7 @@ header{
   }
   100%{
     opacity:1;
-    margin-left: 30px;
+    margin-left: 0px;
   }
 }
 
@@ -107,24 +74,32 @@ header{
 @media screen and (max-width: 992px){
   header{
     height: 50vh;
+
+    h1{
+      font-size:20px; 
+    }
+
+    #header-img{
+      height: 50vh;
+    }
   }
-  header h1{
-    font-size:20px; 
-  }
-  header #header-img{
-    height: 50vh;
-  }
+
   .ev table h4{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-size: 15px;
   }
+  
+  .min-nav{
+    margin: 10px 0!important;
+  }
 }
-@media screen and (min-width: 992px){
+@media screen and (min-width: 720px){
   .w-shedule, .content-container{
     width: 70%; margin: auto; margin-bottom: 10vh;
   }
+
   .ev table{
     width: 97%;
     margin: auto;
@@ -145,7 +120,7 @@ section{
   opacity: .5;
 }
 
-.about_me .story_s{
+.story_s{
   font-size: 30px;
   font-weight: bolder;
   padding:0;
@@ -153,8 +128,12 @@ section{
 }
 
 /* section 2 */
-
+%d-flex-al-center{
+  display: flex;
+  align-items: center;
+}
 .skill-progress{
+  @extend %d-flex-al-center;
   display: flex;
   align-items: center;
 
@@ -164,61 +143,68 @@ section{
   }
 
   .badge{
-    display: flex;
+    @extend %d-flex-al-center;
     justify-content: center;
-    align-items:center;
     height: 3vh;
     border-radius: 30px;
   }
 }
-
 .skill-set-li{
   margin: 5vh auto;
 }
 
-/*TABLE*/
-.ev table {
-  border-collapse: collapse;
-  tr{
-    th, td{
-      text-align: center;
-      padding: 8px;
-      vertical-align: bottom;
-    }
+.langs{
+  -webkit-box-shadow: 0px 15px 100px 11px rgba(0,0,0,0.10); 
+  box-shadow: 0px 15px 100px 11px rgba(0,0,0,0.10);
+  padding:10px;
+  margin-bottom: 10vh;
+}
 
+/*TABLE*/
+.ev {
+  table{
+    border-collapse: collapse;
+
+    tr {
+      th, td {
+        text-align: center;
+        padding: 8px;
+        vertical-align: bottom;
+      } 
+    }
+    
+    tr:hover {
+      background-color: #333!important;
+      color: $c-white!important;
+    }
+    
+    tr:nth-child(odd) {
+      background-color: #f2f2f2;
+    }
+    
+    tr:nth-child(even) {
+      background-color: $c-white;
+    }
+    
     th {
       background-color: #337ab7;
       border-color: #2e6da4;
-      color: white;
+      color: $c-white;
     }
-  }
-
-  tr:hover {
-    background-color: #333!important;
-    color: #fff!important;
-  }
-
-  tr:nth-child(odd) {
-    background-color: #f2f2f2
-  }
-
-  tr:nth-child(even) {
-    background-color: #fff
   }
 }
 
 .goal{
   width: 80%;
   margin: auto;
-
-  ol li{
-    margin: 20px;
-  }
+}
+.goal ol li{
+  margin: 20px;
 }
 
 footer{ 
-  background: black;
-  color: white;
+  background: $c-black;
+  color: $c-white;
   padding:10px;
   margin-bottom: 1vh;
 }
@@ -231,5 +217,9 @@ footer{
   margin-bottom: 10vh;  
 }
 
-
+.min-nav{
+  margin: 10px 15%;
+  padding: 5px;
+  @extend %d-flex-al-center;
+}
 
