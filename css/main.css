@@ -21,18 +21,12 @@ header {
   position: relative;
   margin: auto;
   width: 100%;
-  top: -1.5vh;
+  top: 0;
   height: 90vh;
   background: rgba(255, 255, 255, 0.5);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   color: black;
   -webkit-box-shadow: 0px 15px 35px 11px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 15px 35px 11px rgba(0, 0, 0, 0.2);
@@ -162,7 +156,7 @@ section {
 }
 
 /* section 2 */
-.skill-progress, .skill-progress .badge, .min-nav {
+header, .skill-progress, .skill-progress .badge, .min-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -251,6 +245,10 @@ footer {
 }
 
 /*other pages*/
+.header center > h1 {
+  margin-top: 100px;
+}
+
 .content-container {
   -webkit-box-shadow: 0px 15px 35px 11px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 15px 35px 11px rgba(0, 0, 0, 0.2);

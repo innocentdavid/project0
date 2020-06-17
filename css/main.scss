@@ -17,12 +17,11 @@ header{
   position: relative;
   margin: auto;
   width: 100%;
-  top: -1.5vh;
+  top: 0;
   height: 90vh;
   background: rgba(255,255,255,0.5);
-  display: flex;
+  @extend %d-flex-al-center;
   justify-content: center;
-  align-items: center;
   color:black;
   -webkit-box-shadow: 0px 15px 35px 11px rgba(0,0,0,0.20); 
   box-shadow: 0px 15px 35px 11px rgba(0,0,0,0.20);
@@ -210,6 +209,9 @@ footer{
 }
 
 /*other pages*/
+.header center > h1{
+  margin-top: 100px;
+}
 .content-container{
   -webkit-box-shadow: 0px 15px 35px 11px rgba(0,0,0,0.20); 
   box-shadow: 0px 15px 35px 11px rgba(0,0,0,0.20);
